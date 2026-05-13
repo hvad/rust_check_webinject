@@ -1,0 +1,8 @@
+global_timeout_ms: 5000
+steps:
+  - id: "CONTENT_CHECK"
+    url: "https://example.com/"
+    method: "GET"
+    expected_status: 200
+    verify_positive: "<h1>Example Domain</h1>"
+    verify_negative: "Error|Database|Timeout"

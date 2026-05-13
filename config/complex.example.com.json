@@ -1,0 +1,16 @@
+{
+  "global_timeout_ms": 12000,
+  "steps": [
+    {
+      "id": "STEP_1_GET",
+      "url": "https://example.com/",
+      "expected_status": 200
+    },
+    {
+      "id": "STEP_2_INVALID_CHECK",
+      "url": "https://example.com/api/test",
+      "expected_status": 404,
+      "verify_positive": "Not Found"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+<WebScenario>
+    <global_timeout_ms>5000</global_timeout_ms>
+    <steps>
+        <TestCase>
+            <id>SEC_CHECK</id>
+            <url>https://example.com/</url>
+            <method>GET</method>
+            <expected_status>200</expected_status>
+            <verify_positive>Example</verify_positive>
+            <verify_negative>Forbidden</verify_negative>
+        </TestCase>
+    </steps>
+</WebScenario>

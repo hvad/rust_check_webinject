@@ -1,0 +1,9 @@
+<WebScenario>
+    <steps>
+        <TestCase>
+            <id>XML_BASIC</id>
+            <url>https://example.com/</url>
+            <expected_status>200</expected_status>
+        </TestCase>
+    </steps>
+</WebScenario>

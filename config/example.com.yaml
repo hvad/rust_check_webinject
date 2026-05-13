@@ -1,0 +1,23 @@
+# Configuration globale du test
+global_timeout_ms: 10000
+
+steps:
+  # Étape 1 : Vérification de la disponibilité de la page d'accueil
+  - id: "01_HOME_PAGE"
+    url: "https://example.com/"
+    method: "GET"
+    expected_status: 200
+    # On vérifie que le titre HTML contient bien "Example Domain"
+    verify_positive: "<title>Example Domain</title>"
+    # On s'assure qu'il n'y a pas d'erreur de serveur affichée
+    verify_negative: "Internal Server Error"
+
+  # Étape 2 : Vérification de la présence du lien d'information
+  - id: "02_CHECK_LINK"
+    url: "https://example.com/"
+    method: "GET"
+    expected_status: 200
+    # On vérifie la présence du lien "More information..."
+    verify_positive: "More information..."
+    # On peut aussi vérifier la structure du lien
+    verify_negative: "404 Not Found"

@@ -1,0 +1,24 @@
+<WebScenario>
+    <global_timeout_ms>20000</global_timeout_ms>
+    <steps>
+        <TestCase>
+            <id>INIT_SESSION</id>
+            <url>https://example.com/</url>
+            <method>GET</method>
+            <expected_status>200</expected_status>
+        </TestCase>
+        <TestCase>
+            <id>SEND_DATA</id>
+            <url>https://example.com/data</url>
+            <method>POST</method>
+            <post_data>test_id=99&amp;status=active</post_data>
+            <expected_status>404</expected_status>
+        </TestCase>
+        <TestCase>
+            <id>FINAL_CHECK</id>
+            <url>https://example.com/</url>
+            <method>GET</method>
+            <verify_positive>Domain</verify_positive>
+        </TestCase>
+    </steps>
+</WebScenario>

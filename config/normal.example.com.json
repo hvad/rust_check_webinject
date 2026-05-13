@@ -1,0 +1,12 @@
+{
+  "global_timeout_ms": 4000,
+  "steps": [
+    {
+      "id": "REGEX_VALIDATION",
+      "url": "https://example.com/",
+      "method": "GET",
+      "expected_status": 200,
+      "verify_positive": "More information\\.\\.\\."
+    }
+  ]
+}

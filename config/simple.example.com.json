@@ -1,0 +1,10 @@
+{
+  "global_timeout_ms": 2000,
+  "steps": [
+    {
+      "id": "JSON_UP",
+      "url": "https://example.com/",
+      "expected_status": 200
+    }
+  ]
+}

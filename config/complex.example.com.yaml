@@ -1,0 +1,14 @@
+global_timeout_ms: 10000
+steps:
+  - id: "01_HOME"
+    url: "https://example.com/"
+    expected_status: 200
+  - id: "02_RESOURCES"
+    url: "https://example.com/favicon.ico"
+    method: "GET"
+    expected_status: 200
+  - id: "03_POST_MOCK"
+    url: "https://example.com/"
+    method: "POST"
+    post_data: "action=monitor&status=ok"
+    expected_status: 200
